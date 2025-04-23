@@ -5,7 +5,11 @@ import JcockDescription from '@/containers/main/JcockDescription';
 
 const Container = () => {
   return (
-    <div className={clsx('flex flex-col items-center w-full pt-20')}>
+    <div
+      className={clsx(
+        'flex flex-col items-center w-full pt-20 container mx-auto'
+      )}
+    >
       <LinkDescription />
       <JcockDescription />
     </div>

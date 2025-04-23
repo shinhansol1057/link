@@ -3,9 +3,10 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 type Props = {
+  title: string;
   type: 'link' | 'jcock';
 };
-const ProgramBanner = ({ type }: Props) => {
+const ProgramBanner = ({ title, type }: Props) => {
   return (
     <div
       className={clsx(
@@ -23,7 +24,7 @@ const ProgramBanner = ({ type }: Props) => {
         fill
         priority
       />
-      <h1 className={'text-5xl text-white font-normal z-10'}>프로그램 안내</h1>
+      <h1 className={'text-5xl text-white font-normal z-10'}>{title}</h1>
     </div>
   );
 };

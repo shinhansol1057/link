@@ -10,11 +10,7 @@ import TimeTable from '@/components/main/TimeTable';
 const LinkDescription = () => {
   const router = useRouter();
   return (
-    <div
-      className={clsx(
-        'w-full px-20 pb-16 pt-28 flex flex-col gap-20 items-center'
-      )}
-    >
+    <div className={clsx('w-full pb-16 flex flex-col gap-20 items-center')}>
       <div className={clsx('w-full flex flex-col py-10 gap-6')}>
         <div className={'flex justify-between'}>
           <h1 className={'font-semibold text-4xl text-slate-950'}>
@@ -62,7 +58,9 @@ const LinkDescription = () => {
           <h1 className={'font-semibold text-4xl text-slate-950'}>
             📍 지점 소개
           </h1>
-          <LinkBtn onClick={() => router.push('/location')}>상세 보기</LinkBtn>
+          <LinkBtn onClick={() => router.push('/location/link')}>
+            상세 보기
+          </LinkBtn>
         </div>
         <div className={'flex gap-6 items-center'}>
           <div className={'flex gap-2'}>
