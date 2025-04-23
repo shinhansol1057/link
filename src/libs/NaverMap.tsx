@@ -21,17 +21,15 @@ export default function NaverMap({ address, className }: Props) {
 
   useEffect(() => {
     if (!naverLoaded || !mapRef.current || !window.naver) return;
-
     const map = new naver.maps.Map(mapRef.current, {
       center: new naver.maps.LatLng(33.475146416323, 126.48871816577), // 대충 설정
       zoom: 16,
     });
 
-    const marker = new naver.maps.Marker({
+    new naver.maps.Marker({
       position: new naver.maps.LatLng(33.475146416323, 126.48871816577),
       map,
     });
-
     naver.maps.Event.addListener(map, 'click', () => {
       const mapUrl = `https://map.naver.com/v5/search/${encodeURIComponent(address)}`;
       window.open(mapUrl, '_blank'); // 네이버 지도 앱/웹으로 연결
