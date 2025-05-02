@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react/dist/iconify.js';
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { Dispatch, SetStateAction } from 'react';
