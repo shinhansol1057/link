@@ -3,7 +3,16 @@
 
 html, body, #root {
     height: 100%;
+    overflow-x: hidden;
 }
+
+
+@layer base {
+    #root{
+        @apply text-xs md:text-sm xl:text-base;
+    }
+}
+
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
     -webkit-appearance: none;

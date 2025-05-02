@@ -61,7 +61,7 @@ export default function RootLayout({
     <html lang='kr'>
       <body className={inter.className}>
         <Nav />
-        {children}
+        <div className={'xl:pt-24 pt-17'}>{children}</div>
         <Footer />
       </body>
     </html>
