@@ -10,7 +10,8 @@ const ProgramBanner = ({ title, type }: Props) => {
   return (
     <div
       className={clsx(
-        'flex flex-col justify-center relative w-full h-[300px] overflow-hidden pl-52'
+        'flex flex-col justify-center relative w-full ',
+        'md:h-75 h-27 overflow-hidden xl:pl-52 md:pl-36 pl-10'
       )}
     >
       <Image
@@ -24,7 +25,9 @@ const ProgramBanner = ({ title, type }: Props) => {
         fill
         priority
       />
-      <h1 className={'text-5xl text-white font-normal z-10'}>{title}</h1>
+      <h1 className={'md:text-5xl text-xl text-white font-normal z-10'}>
+        {title}
+      </h1>
     </div>
   );
 };

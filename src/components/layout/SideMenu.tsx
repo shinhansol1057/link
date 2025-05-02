@@ -34,22 +34,13 @@ const SideMenu = ({ sideMenuIsOpen, setSideMenuIsOpen }: Props) => {
           className={clsx(
             'fixed xl:top-24 top-17 right-0 overflow-y-auto',
             'xl:h-[calc(100vh-96px)] h-[calc(100vh-68px)]',
-            ' flex flex-col md:gap-10 gap-4 py-6 bg-slate-300 md:w-100  w-full z-40'
+            ' flex flex-col gap-10 p-14 bg-slate-700 md:w-92 w-full z-40'
           )}
         >
           <button
             className={clsx(
-              'flex justify-between items-center p-8 cursor-pointer ',
-              'hover:bg-slate-500 hover:text-white'
-            )}
-            onClick={() => navigator('home')}
-          >
-            링크 농구교실 X 제이콕 배드민턴
-          </button>
-          <button
-            className={clsx(
-              'flex justify-between items-center p-8 cursor-pointer ',
-              'hover:bg-slate-500 hover:text-white'
+              'text-center py-2 cursor-pointer rounded-md',
+              'bg-slate-600 hover:bg-slate-500 text-white'
             )}
             onClick={() => navigator('program')}
           >
@@ -57,8 +48,8 @@ const SideMenu = ({ sideMenuIsOpen, setSideMenuIsOpen }: Props) => {
           </button>
           <button
             className={clsx(
-              'flex justify-between items-center p-8 cursor-pointer ',
-              'hover:bg-slate-500 hover:text-white'
+              'text-center py-2 cursor-pointer rounded-md',
+              'bg-slate-600 hover:bg-slate-500 text-white'
             )}
             onClick={() => navigator('timetable')}
           >
@@ -66,8 +57,8 @@ const SideMenu = ({ sideMenuIsOpen, setSideMenuIsOpen }: Props) => {
           </button>
           <button
             className={clsx(
-              'flex justify-between items-center p-8 cursor-pointer ',
-              'hover:bg-slate-500 hover:text-white'
+              'text-center py-2 cursor-pointer rounded-md',
+              'bg-slate-600 hover:bg-slate-500 text-white'
             )}
             onClick={() => navigator('location')}
           >

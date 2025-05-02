@@ -1,17 +1,11 @@
 import clsx from 'clsx';
 import React from 'react';
-import LinkDescription from '@/containers/main/LinkDescription';
-import JcockDescription from '@/containers/main/JcockDescription';
+import Description from '@/containers/main/Description';
 
 const Container = () => {
   return (
-    <div
-      className={clsx(
-        'flex flex-col items-center w-full pt-20 container mx-auto'
-      )}
-    >
-      <LinkDescription />
-      <JcockDescription />
+    <div className={clsx('flex flex-col items-center w-full')}>
+      <Description />
     </div>
   );
 };

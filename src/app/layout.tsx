@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   description: '링크 농구교실 X 제이콕 배드민턴 홈페이지입니다.',
   icons: {
-    icon: '/logo/logo-link.jpg',
+    icon: '/logo/logo-link.svg',
   },
   openGraph: {
     title: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description: '링크 농구교실 X 제이콕 배드민턴 홈페이지입니다.',
     images: [
       {
-        url: '/logo/link-logo.jpg',
+        url: '/logo/link-logo.svg',
         width: 1000,
         height: 1000,
         alt: 'logo',

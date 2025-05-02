@@ -3,16 +3,28 @@ import React from 'react';
 import ProgramBanner from '@/components/program/ProgramBanner';
 import ProgramType from '@/components/program/ProgramType';
 import ProgramCard from '@/components/program/ProgramCard';
+import useWindowSize from '@/hooks/useWindowSize';
 
 const Page = () => {
+  const windowSize = useWindowSize();
   return (
     <div className={'flex flex-col items-center'}>
       <ProgramBanner title={'프로그램 안내'} type={'link'} />
       <ProgramType type={'program'} />
-      <p className={'text-5xl font-normal text-[#111111] mt-24'}>
-        움직임을 잇고, 사람을 잇고, 성장을 잇는 링크 농구교실
-      </p>
-      <div className={'px-20 py-24 flex flex-col items-center gap-20'}>
+      {windowSize.width > 768 && (
+        <p
+          className={
+            'xl:text-5xl md:text-3xl font-semibold text-black xl:mt-24 md:mt-16'
+          }
+        >
+          움직임을 잇고, 사람을 잇고, 성장을 잇는 링크 농구교실
+        </p>
+      )}
+      <div
+        className={
+          'xl:px-28 xl:py-24 md:p-20 p-8 flex flex-col items-center md:gap-20 gap-10'
+        }
+      >
         <ProgramCard
           photoSide='left'
           imgSrc='/program/program-link1.svg'

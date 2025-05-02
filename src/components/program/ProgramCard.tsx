@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
+import useWindowSize from '@/hooks/useWindowSize';
 
 type Props = {
   photoSide: 'left' | 'right';
@@ -18,23 +19,51 @@ const ProgramCard = ({
   text2,
   title,
 }: Props) => {
+  const windowSize = useWindowSize();
   return (
     <div
-      className={clsx(
-        'w-full flex px-10 pb-24 gap-16 justify-center ',
-        photoSide === 'left' ? 'flex-row ' : 'flex-row-reverse ',
-        num !== '05' && 'border-b border-slate-300'
-      )}
+      className={clsx('w-full grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-4')}
     >
-      <div className={clsx('flex flex-1/2')}>
-        <Image src={imgSrc} alt={text1 + 'photo'} width={800} height={400} />
+      {(photoSide === 'left' || windowSize.width < 767) && (
+        <div
+          className={'relative overflow-hidden w-full md:h-100 h-36 rounded-sm'}
+        >
+          <Image
+            className={'absolute object-cover'}
+            src={imgSrc}
+            alt={text1 + 'photo'}
+            fill
+            priority
+          />
+        </div>
+      )}
+      <div className={'flex flex-col md:gap-4 gap-2 justify-center'}>
+        <div className={'flex md:flex-col flex-row md:gap-4 gap-2'}>
+          <p className={'md:text-2xl text-base text-slate-950'}>{num}</p>
+          <h2
+            className={
+              'xl:text-4xl md:text-2xl text-base font-semibold text-slate-950'
+            }
+          >
+            {title}
+          </h2>
+        </div>
+        <p className={'xl:text-lg md:text-base text-sm text-black'}>{text1}</p>
+        <p className={'xl:text-lg md:text-base text-sm text-black'}>{text2}</p>
       </div>
-      <div className={'flex flex-1/2 flex-col gap-4'}>
-        <p className={'text-2xl font-normal text-slate-950'}>{num}</p>
-        <h2 className={'text-4xl font-semibold text-slate-950'}>{title}</h2>
-        <p className={'text-lg font-normal text-black'}>{text1}</p>
-        <p className={'text-lg font-normal text-black'}>{text2}</p>
-      </div>
+      {photoSide === 'right' && windowSize.width > 768 && (
+        <div
+          className={'relative overflow-hidden w-full md:h-100 h-36 rounded-sm'}
+        >
+          <Image
+            className={'absolute object-cover'}
+            src={imgSrc}
+            alt={text1 + 'photo'}
+            fill
+            priority
+          />
+        </div>
+      )}
     </div>
   );
 };

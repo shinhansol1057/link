@@ -55,15 +55,6 @@ const Nav = () => {
           >
             지점 안내
           </button>
-          {/*<button*/}
-          {/*  className={clsx(*/}
-          {/*    'font-normal text-xl cursor-pointer ',*/}
-          {/*    pathname.includes('gallery') ? 'text-slate-400' : 'text-white'*/}
-          {/*  )}*/}
-          {/*  onClick={() => router.push('/gallery')}*/}
-          {/*>*/}
-          {/*  갤러리*/}
-          {/*</button>*/}
         </div>
       ) : (
         <button className={'cursor-pointer'} onClick={() => setIsOpen(!isOpen)}>

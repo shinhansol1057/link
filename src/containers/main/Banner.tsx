@@ -26,7 +26,7 @@ const Banner = () => {
   return (
     <div
       className={clsx(
-        'flex flex-col items-center relative w-full h-[860px] overflow-hidden pt-20'
+        'flex flex-col items-center relative w-full xl:h-174 md:h-170 overflow-hidden py-28'
       )}
     >
       <Image
@@ -45,7 +45,7 @@ const Banner = () => {
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <div className='flex flex-row gap-16 items-center'>
+        <div className='flex flex-row xl:gap-16 md:gap-10 items-center'>
           <BannerSubCard type={subType} />
           <BannerMainCard type={mainType} />
           <BannerSubCard type={subType} />
