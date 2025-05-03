@@ -92,7 +92,7 @@ const Description = () => {
         <div className={'md:grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-6'}>
           <div
             className={clsx(
-              'relative flex justify-between w-full md:h-100 h-52 overflow-hidden rounded-sm'
+              'relative flex justify-between w-full md:h-100 h-52 overflow-hidden rounded-sm mb-6'
             )}
           >
             <Image
