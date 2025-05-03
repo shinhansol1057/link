@@ -6,9 +6,9 @@ import Image from 'next/image';
 import useWindowSize from '@/hooks/useWindowSize';
 
 type Props = {
-  type: 'program' | 'location';
+  type: 'program' | 'location' | 'timetable';
 };
-const ProgramType = ({ type }: Props) => {
+const Category = ({ type }: Props) => {
   const pathName = usePathname();
   const router = useRouter();
   const windowSize = useWindowSize();
@@ -20,7 +20,13 @@ const ProgramType = ({ type }: Props) => {
     >
       <button
         onClick={() =>
-          router.push(type === 'program' ? '/program/link' : '/location/link')
+          router.push(
+            type === 'program'
+              ? '/program/link'
+              : type === 'timetable'
+                ? '/timetable/link'
+                : '/location/link'
+          )
         }
         className={clsx(
           'flex gap-4 items-center cursor-pointer ',
@@ -39,7 +45,13 @@ const ProgramType = ({ type }: Props) => {
       </button>
       <button
         onClick={() =>
-          router.push(type === 'program' ? '/program/jcock' : '/location/jcock')
+          router.push(
+            type === 'program'
+              ? '/program/jcock'
+              : type === 'timetable'
+                ? '/timetable/jcock'
+                : '/location/jcock'
+          )
         }
         className={clsx(
           'flex px-4 gap-4 items-center cursor-pointer ',
@@ -60,4 +72,4 @@ const ProgramType = ({ type }: Props) => {
   );
 };
 
-export default ProgramType;
+export default Category;

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import ProgramBanner from '@/components/program/ProgramBanner';
-import ProgramType from '@/components/program/ProgramType';
+import Category from '@/components/layout/Category';
 import ProgramCard from '@/components/program/ProgramCard';
 import useWindowSize from '@/hooks/useWindowSize';
 
@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <div className={'flex flex-col items-center'}>
       <ProgramBanner title={'프로그램 안내'} type={'link'} />
-      <ProgramType type={'program'} />
+      <Category type={'program'} />
       {windowSize.width > 768 && (
         <p
           className={

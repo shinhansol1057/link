@@ -2,7 +2,7 @@
 import React from 'react';
 import ProgramBanner from '@/components/program/ProgramBanner';
 import NaverMap from '@/libs/NaverMap';
-import ProgramType from '@/components/program/ProgramType';
+import Category from '@/components/layout/Category';
 import Image from 'next/image';
 import useWindowSize from '@/hooks/useWindowSize';
 
@@ -11,7 +11,7 @@ const Page = () => {
   return (
     <div className={'flex flex-col items-center'}>
       <ProgramBanner title={'지점 안내'} type={'link'} />
-      <ProgramType type={'location'} />
+      <Category type={'location'} />
       {windowSize.width > 768 && (
         <p
           className={
