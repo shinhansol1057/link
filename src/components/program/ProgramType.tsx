@@ -24,7 +24,7 @@ const ProgramType = ({ type }: Props) => {
         }
         className={clsx(
           'flex gap-4 items-center cursor-pointer ',
-          pathName === '/program/link' && 'border-b border-slate-900'
+          pathName.includes('link') && 'border-b border-slate-900'
         )}
       >
         <Image
@@ -43,7 +43,7 @@ const ProgramType = ({ type }: Props) => {
         }
         className={clsx(
           'flex px-4 gap-4 items-center cursor-pointer ',
-          pathName === '/program/jcock' && 'border-b border-slate-900'
+          pathName.includes('jcock') && 'border-b border-slate-900'
         )}
       >
         <Image

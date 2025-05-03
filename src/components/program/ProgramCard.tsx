@@ -24,7 +24,7 @@ const ProgramCard = ({
     <div
       className={clsx('w-full grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-4')}
     >
-      {(photoSide === 'left' || windowSize.width < 767) && (
+      {(photoSide === 'left' || windowSize.width < 769) && (
         <div
           className={'relative overflow-hidden w-full md:h-100 h-36 rounded-sm'}
         >

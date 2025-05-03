@@ -12,6 +12,10 @@ const Nav = () => {
   const windowSize = useWindowSize();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const goToHome = () => {
+    setIsOpen(false);
+    router.push('/');
+  };
   return (
     <nav
       className={clsx(
@@ -20,10 +24,7 @@ const Nav = () => {
         'xl:text-xl md:text-lg text-base z-50'
       )}
     >
-      <button
-        className={'text-white cursor-pointer'}
-        onClick={() => router.push('/')}
-      >
+      <button className={'text-white cursor-pointer'} onClick={goToHome}>
         링크 농구교실 X 제이콕 배드민턴
       </button>
       {windowSize.width > 1280 ? (

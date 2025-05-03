@@ -4,9 +4,11 @@ import { useEffect, useRef, useState } from 'react';
 type Props = {
   address: string;
   className?: string;
+  lat: number;
+  lon: number;
 };
 
-export default function NaverMap({ address, className }: Props) {
+export default function NaverMap({ address, className, lat, lon }: Props) {
   const mapRef = useRef(null);
   const [naverLoaded, setNaverLoaded] = useState(false);
   const secretKey = process.env.NEXT_PUBLIC_NAVER_API_KEY;
@@ -22,12 +24,12 @@ export default function NaverMap({ address, className }: Props) {
   useEffect(() => {
     if (!naverLoaded || !mapRef.current || !window.naver) return;
     const map = new naver.maps.Map(mapRef.current, {
-      center: new naver.maps.LatLng(33.475146416323, 126.48871816577), // 대충 설정
+      center: new naver.maps.LatLng(lat, lon),
       zoom: 16,
     });
 
     new naver.maps.Marker({
-      position: new naver.maps.LatLng(33.475146416323, 126.48871816577),
+      position: new naver.maps.LatLng(lat, lon),
       map,
     });
     naver.maps.Event.addListener(map, 'click', () => {
