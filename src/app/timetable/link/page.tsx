@@ -57,11 +57,6 @@ const Page = () => {
               제주특별자치도 제주시 서광로 46-8
             </p>
           </div>
-          <TimeTable
-            days={weekdays}
-            times={linkWeekdayTimes}
-            classData={linkWeekdayClass}
-          />
           <div className={'grid grid-cols-2 xl:gap-32 md:gap-20 gap-6'}>
             <TimeTable
               days={saturday}
@@ -93,6 +88,11 @@ const Page = () => {
               제주특별자치도 제주시 연화남길 22 3층
             </p>
           </div>
+          <TimeTable
+            days={weekdays}
+            times={linkWeekdayTimes}
+            classData={linkWeekdayClass}
+          />
         </div>
       </div>
     </div>

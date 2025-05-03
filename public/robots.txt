@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.link-jcock.com
+
+# Sitemaps
+Sitemap: https://www.link-jcock.com/sitemap.xml

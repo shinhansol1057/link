@@ -26,13 +26,6 @@ const TimeTable = ({ days, times, classData }: Props) => {
           )}
           {days[0] === '월' && (
             <tr>
-              <th className='md:p-4 p-2 bg-slate-600 text-white' colSpan={6}>
-                평일
-              </th>
-            </tr>
-          )}
-          {days[0] === '월' && (
-            <tr>
               <th className='md:p-4 p-2 bg-slate-700 text-white'>시간</th>
               {days.map((day) => (
                 <th key={day} className='md:p-4 p-2 bg-slate-700  text-white'>
