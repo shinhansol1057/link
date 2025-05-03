@@ -5,17 +5,6 @@ import ProgramBanner from '@/components/program/ProgramBanner';
 import Category from '@/components/layout/Category';
 import LinkBtn from '@/components/main/LinkBtn';
 import TimeTable from '@/components/timetable/TimeTable';
-import {
-  linkSaturdayClass,
-  linkSaturdayTimes,
-  linkSundayClass,
-  linkSundayTimes,
-  linkWeekdayClass,
-  linkWeekdayTimes,
-  saturday,
-  sunday,
-  weekdays,
-} from '@/constants/linkTable';
 import { useRouter } from 'next/navigation';
 import {
   jcockWeekdayClass,
