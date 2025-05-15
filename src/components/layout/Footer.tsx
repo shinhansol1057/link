@@ -91,7 +91,7 @@ const Footer = () => {
           <div className={'flex flex-wrap gap-6'}>
             <p className={'md:text-base text-sm'}>- 연동점</p>
             <p className={'text-sm text-slate-400'}>박순범</p>
-            <p className={'text-sm text-slate-400'}>010 9185 0474</p>
+            <p className={'text-sm text-slate-400'}>010 7756 0474</p>
             <p className={'text-sm text-slate-400'}>제주시 연화남길 22 3층</p>
           </div>
           <div className={'flex flex-wrap gap-6'}>

@@ -27,7 +27,7 @@ const Page = () => {
       >
         <ProgramCard
           photoSide='left'
-          imgSrc='/program/program-jcock1.svg'
+          imgSrc='/program/program-jcock1.jpeg'
           num={'01'}
           title='기초부터 탄탄하게 배우는 기본기'
           text1={'처음 라켓을 잡는 아이도 걱정하지 마세요!'}
@@ -37,7 +37,7 @@ const Page = () => {
         />
         <ProgramCard
           photoSide='right'
-          imgSrc='/program/program-jcock2.svg'
+          imgSrc='/program/program-jcock2.jpeg'
           num={'02'}
           title='놀이형 수업으로 재미있게 배워요!'
           text1={'기술 연습만 반복하면 아이들이 쉽게 지루해질 수 있어요.'}
@@ -68,7 +68,7 @@ const Page = () => {
         />
         <ProgramCard
           photoSide='left'
-          imgSrc='/program/program-jcock5.svg'
+          imgSrc='/program/program-jcock5.jpeg'
           num={'05'}
           title='미니게임 & 자체 대회까지!'
           text1={'아이들이 직접 배운 것을 실전에서 써볼 수 있는 기회!'}

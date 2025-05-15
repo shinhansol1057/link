@@ -48,7 +48,7 @@ const Page = () => {
           </div>
           <div className={'flex flex-col md:gap-4 gap-1'}>
             <p className={'md:text-xl text-sm text-slate-950'}>
-              박순범 코치 - 010 9185 0474
+              박순범 코치 - 010 7756 0474
             </p>
             <p className={'md:text-xl text-sm text-slate-950'}>
               제주특별자치도 제주시 연화남길 22 3층
@@ -77,7 +77,7 @@ const Page = () => {
           </div>
           <div className={'flex flex-col md:gap-4 gap-1'}>
             <p className={'md:text-xl text-sm text-slate-950'}>
-              박순범 코치 - 010 9185 0474
+              박순범 코치 - 010 7756 0474
             </p>
             <p className={'md:text-xl text-sm text-slate-950'}>
               제주특별자치도 서귀포시 대정읍 안성리 1156
